@@ -1,4 +1,792 @@
-/* src/styles.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@font-face {
+  font-family: 'mg';
+  src: url(fonts/MADE\ GoodTime\ Grotesk\ PERSONAL\ USE.otf);
+}
+
+/* Header.css */
+.header {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  position: relative;
+  align-items: center;
+  height: 5vh; 
+  left:120px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 39%;
+  margin-left: 17vw;
+}
+
+.nav-links a {
+  font-family: 'Helvetica', Arial, sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn {
+  font-family: 'Helvetica', Arial, sans-serif;
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative; /* Add position relative to allow positioning the arrow */
+  font-size: 16px;
+}
+
+.arrow {
+  position: absolute;
+  top: 52%;
+  font-size: 1vh;
+  right: -0.7rem;
+  transform: translateY(-50%);
+}
+
+.arrow:hover ~ .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+.nav-but {
+  margin-left: 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 13%;
+}
+
+.nav-but a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-but button {
+  background-color: #007bff;
+  color: white;
+  padding: 14px 19px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 7px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+}
+
+.top-section {
+  color: white;
+  font-size: 2.7vw;
+  font-family: 'mg', sans-serif;
+  top: 50px;
+  left: 160px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+
+.top-section p {
+  font-size: 30px;
+  font-weight: 150;
+  line-height: 1.8;
+  margin-top: -200px;
+}
+
+.top-section button {
+  background-color: #007bff;
+  color: white;
+  padding: 18px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 7px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+}
+
+.imagea {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+  position: relative;
+  left: 54.7vw;
+  bottom: 33vh;
+}
+
+.imageb {
+  position: relative;
+  height: 120px;
+  width: 190px;
+  left: 33vw;
+  bottom: 18vh;
+  border-radius: 10px;
+}
+
+.imagec {
+  position: relative;
+  height: 180px;
+  width: 190px;
+  left: 34.4vw;
+  bottom: 12.4vh;
+  border-radius: 10px;
+}
+
+.imaged {
+  position: relative;
+  height: 120px;
+  width: 190px;
+  left: 35.7vw;
+  bottom: 18vh;
+  border-radius: 10px;
+}
+
+/* BodySection.css */
+.background-section {
+  background-color: rgb(11, 53, 88);
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+ 
+/* homepage.css */
+
+.slogan {
+  width: 100%;
+  height: 100%;
+}
+
+.slogan h1 {
+  font-size: 4.8vh;
+  margin-left: 24vw;
+  margin-top: 24vh;
+  color: rgb(11, 53, 88);
+}
+
+.slogan h2 {
+  margin-left: 41vw; 
+  font-size: 4.8vh;
+  margin-top: -3.7vh;
+  color: rgb(11, 53, 88);
+}
+
+.slogan p {
+  font-size: 2.5vh;
+  color: rgb(71, 103, 136);
+  font-weight: 200;
+  margin-left: 23vw;
+  line-height: 1.7;
+  
+}
+
+.hidden {
+  visibility: hidden;
+
+  opacity: 0;
+  transition: visibility 0s, opacity 1s ease-out;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.7s ease-in;
+}
+
+
+
+
+
+
+.sub-text {
+  margin-left: 19.5vw;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 11vh;
+  background-color: rgb(244, 248, 255);
+  height: 400px;
+  align-items: center;
+}
+.stat:after {
+  content: "";
+  position: absolute;
+  width: 3px; /* This sets the width of the line */
+  height: 90%; /* This sets the height of the line */
+  align-items: center;
+  border-radius: 3px;
+  background-color: rgba(218, 220, 223, 0.718);/* This sets the color of the line */
+  left: 22vw; /* This positions the line at the left edge of the stat */
+  bottom: 30px; /* This positions the line at the bottom of the stat */
+  /* Here you can add more style to the line using properties like border or margin */
+}
+.stat:last-child:after {
+  /* This hides the line after the last stat element */
+  display: none;
+}
+
+.stat {
+  position: relative;
+}
+
+.stat h3 {
+  font-size: 4.7vh;
+  margin-top: -10px;
+  font-weight: bolder;
+  text-decoration: solid;
+  color: rgb(11, 53, 88);
+}
+
+.stat p {
+  margin-top: -30px;
+  font-size: 2.4vh;
+  font-weight: 300;
+  margin-left: 2px;
+  color: rgb(11, 53, 88);
+}
+
+
+
+
+
+
+
+
+.loga {
+  height: 5vh;
+  width: 5vw;
+  position: relative;
+  top: -5px;
+  left: -3px;
+}
+
+.logb {
+  height: 5vh;
+  width: 5vw;
+  position: relative;
+  left: -6px;
+}
+
+.logc {
+  height: 4vh;
+  width: 4vw;
+  position: relative;
+  top: 15px;
+  left: -9px;
+}
+
+.para {
+  margin-top: 100px;
+display: inline-block;
+  height: 50vh;
+}
+
+.para h3.animated {
+  color: rgb(11, 53, 88);
+  font-size: 3.3vh;
+  margin-left: 4.2vw;
+
+
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(35), cursor 1s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+.para p {
+  color: rgb(11, 53, 88);;
+  font-size: 2.5vh;
+  line-height: 1.7;
+  margin-left: 4.2vw;
+  font-weight: 200;
+}
+
+
+
+.comp {
+  position: relative;
+  height: 54vh;
+  left: 53vw;
+  top: -35.2vh;
+  transition: transform 0.3s ease-in-out; /* Apply smooth transition for scaling */
+}
+
+.comp:hover {
+  /* Apply scale up effect on hover */
+  transform: scale(1.05); /* Adjust the scale factor as needed */
+}
+
+
+
+.fourr {
+  background-color: rgba(248, 248, 248, 1);
+margin-top: -25vh;
+  height: 70vh;
+}
+
+.four {
+  height: 50vh;
+  margin-left: 8vw;
+  margin-top: 10vh;
+  transition: transform 0.3s ease-in-out; /* Apply smooth transition for animation */
+}
+
+.four:hover {
+  animation: pulse 1s infinite alternate; /* Apply the Pulse animation on hover */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+
+.fourr h3 {
+
+  margin-left:  60vw;
+  margin-top: -40vh;
+  font-size: 2.8vh;
+  
+}
+
+
+
+
+.fourr p {
+ 
+  margin-left: 60vw;
+  top: -40vh;
+  font-weight: 300;
+  font-size: 1.8vh;
+  line-height: 1.8;
+  color: rgb(11, 53, 88);
+ 
+
+}
+
+
+
+
+
+.five {
+  margin-top: 200px;
+  
+ 
+}
+
+/* styles.css */
+
+
+
+.five h3 {
+  color: rgb(11, 53, 88);;
+  font-size: 3vh;
+  margin-left: 4.2vw;
+}
+
+.five p {
+  color: rgb(11, 53, 88);;
+  font-size: 2.2vh;
+  line-height: 1.7;
+  margin-left: 4.2vw;
+  font-weight: 200;
+}
+
+.fiveimg{
+  position: relative;
+  height: 60vh;
+  left: 46vw;
+  top: -42vh;
+  transition: transform 1s; /* Apply smooth transition for rotation */
+  
+ 
+}
+
+.fiveimg:hover {
+  /* Apply rotation on hover */
+  transform: rotate(360deg);
+}
+
+
+.features h5{
+  color:#007bff; 
+  font-weight: 470;
+  font-size: 1.6vh;
+  margin-left: 44vw;
+  margin-top: -29vh;
+ 
+}
+.features h1{
+  color: rgb(11, 53, 88);
+  margin-left: 34.2vw;
+  font-size: 3.5vh;
+}
+
+.features p{
+  margin-left: 28vw;
+  margin-top: 35px;
+  font-size: 2.2vh;
+  font-weight: 300;
+  color: rgba(11, 53, 88, 0.553);;
+}
+
+.subtext{
+  margin-left: 16.3vw;
+  line-height: 2;
+}
+
+
+.try{
+  
+    background-color: #007bff;
+    color: white;
+    padding: 18px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 7px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    margin-left: 39vw;
+  
+}
+
+.learn{
+  
+position: relative;
+left: -38vw;
+background-color: white;
+    color: black;
+    padding: 18px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 7px;
+    cursor: pointer;
+    border: solid 2px black;
+    border-radius: 30px;
+    margin-left: 39vw;
+}
+
+
+
+
+
+/* Hide horizontal overflow */
+body {
+  overflow-x: hidden;
+}
+
+
+
+.compliant {
+  margin-top: 100px;
+display: inline-block;
+  height: 50vh;
+}
+
+.compliant h6{
+  font-size: 2.5vh;
+  color: #007bff;
+  font-weight: 400;
+  margin-left: 58vw;
+}
+
+.compliant h4.animated {
+  color: rgb(11, 53, 88);
+  font-size: 3.7vh;
+  margin-left: 58vw;
+
+
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(25), cursor 1s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+.compliant p {
+  color: rgb(11, 53, 88);;
+  font-size: 2.5vh;
+  line-height: 1.7;
+  margin-left: 58.2vw;
+  font-weight: 200;
+}
+
+
+
+.pic{
+  position: relative;
+  height: 54vh;
+  left: 6vw;
+  top: -35.2vh;
+  transition: transform 0.3s ease-in-out; /* Apply smooth transition for scaling */
+}
+
+.pic:hover {
+  /* Apply scale up effect on hover */
+  transform: scale(1.05); /* Adjust the scale factor as needed */
+}
+
+
+
+
+
+.save {
+  margin-top: 100px;
+display: inline-block;
+  height: 50vh;
+}
+
+.save h5.animated {
+  color: rgb(11, 53, 88);
+  font-size: 3.3vh;
+  margin-left: 4.2vw;
+
+
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(35), cursor 1s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+.save p {
+  color: rgb(11, 53, 88);;
+  font-size: 2.5vh;
+  line-height: 1.7;
+  margin-left: 4.2vw;
+  font-weight: 200;
+}
+
+
+
+.pix {
+  position: relative;
+  height: 54vh;
+  left: 53vw;
+  top: -35.2vh;
+  transition: transform 0.3s ease-in-out; /* Apply smooth transition for scaling */
+}
+
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  width: 80%;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width:25%;
+  
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1) inset; /* Top inset shadow */
+}
+.card {
+  /* Other styles */
+  height: 400px;  /* Example: Set a fixed height of 300 pixels */
+}
+.card h3 {
+  margin-top: 1vh;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #007bff;
+  text-align: left;
+}
+.card p{
+  font-weight: 450;
+  line-height: 1.6;
+  text-align: left;
+}
+.stack{
+  position: relative;
+  height: 18.9vh
+} 
+.texas{
+  position: relative;
+  height: 19.9vh
+} 
+
+.bitly{
+  position: relative;
+  height: 18.9vh
+} 
+
+
+.read-more {
+  color: #007bff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-left: -15.5vw;
+  
+
+
+
+}
+
+.arroww {
+  position: relative;
+  margin-left: 6px;
+}
+
+.arroww::after {
+  content: '>'; /* Unicode character for 'greater than' sign */
+  position: absolute;
+  right: -10px; /* Adjust this value as needed to position the arrow */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+
+
+
+
+.success h5{
+  color:#007bff; 
+  font-weight: 470;
+  font-size: 1.8vh;
+  margin-left: 44vw;
+  margin-top: -29vh;
+ 
+}
+.success h1{
+  color: rgb(11, 53, 88);
+  margin-left: 31vw;
+  font-size: 4vh;
+}
+
+.success p{
+  margin-left: 27vw;
+  margin-top: 35px;
+  font-size: 2.3vh;
+  font-weight: 300;
+  color: rgba(11, 53, 88, 0.553);;
+}
+
+.subttext{
+  margin-left: 16.3vw;
+  line-height: 2;
+}
+
+body{
+  overflow-x: hidden;
+}
